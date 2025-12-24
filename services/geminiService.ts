@@ -9,18 +9,20 @@ export async function getBrandAdvice(prompt: string) {
       model: 'gemini-3-flash-preview',
       contents: prompt,
       config: {
-        systemInstruction: `You are the AI Brand Strategist for 'Nexus Media', a premium digital marketing and videography agency. 
-        Your tone is professional, creative, and highly strategic. 
-        You provide short, punchy advice on branding, social media, and video production.
-        If asked about Nexus Media, highlight their expertise in high-end commercials, data-driven marketing, and unique identity creation.
+        systemInstruction: `You are the 'FuelBot', the high-energy AI Brand Strategist for 'Scrollfuel'. 
+        Scrollfuel is a premium digital agency that provides 'Digital Energy to your Business'.
+        Your tone is energetic, direct, bold, and growth-oriented. 
+        You use high-octane language related to energy, acceleration, and fuel.
+        Provide short, punchy advice on branding, social media, and cinematic video.
+        When asked about Scrollfuel, emphasize their expertise in 'Powering up' brands and delivering explosive ROI.
         Keep responses under 100 words.`,
-        temperature: 0.7,
+        temperature: 0.8,
       },
     });
 
     return response.text;
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "I'm having trouble connecting to my creative circuits right now. Please try again or contact our human team!";
+    return "The fuel lines are clogged! I can't connect right now. Try refreshing the engine.";
   }
 }

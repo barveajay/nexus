@@ -3,36 +3,38 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="py-24 bg-dark">
+    <section id="about" className="py-32 bg-black relative">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="relative">
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-3xl"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1522071823991-b9671f9d7f1f?q=80&w=2070&auto=format&fit=crop" 
-              alt="Creative Team" 
-              className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"
-            />
-            <div className="absolute -bottom-6 -right-6 bg-primary p-8 rounded-2xl hidden md:block">
-              <p className="text-4xl font-bold">10+</p>
-              <p className="text-sm font-medium text-white/80">Years of Experience</p>
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-[80px]"></div>
+            <div className="border-2 border-zinc-900 rounded-[3rem] p-4 overflow-hidden">
+               <img 
+                src="https://images.unsplash.com/photo-1542744094-3a31f107e537?q=80&w=2070&auto=format&fit=crop" 
+                alt="Scrollfuel HQ" 
+                className="rounded-[2.5rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000 transform hover:scale-105"
+              />
+            </div>
+            <div className="absolute -bottom-10 -right-4 bg-primary px-10 py-8 rounded-3xl hidden md:block shadow-2xl shadow-primary/30">
+              <p className="text-6xl font-black text-black leading-none">SF</p>
+              <p className="text-[10px] font-black text-black/80 uppercase tracking-widest mt-2">Energy Level: 100%</p>
             </div>
           </div>
           
           <div>
-            <h2 className="text-sm font-bold text-primary tracking-widest uppercase mb-4">Who We Are</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-extrabold mb-6">Mastering the Art of Digital Storytelling.</h3>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-              Nexus Media isn't just an agency; we are your creative partners. We believe that every brand has a soul, and our mission is to translate that essence into visual experiences that resonate and convert.
+            <h2 className="text-xs font-black text-primary tracking-[0.4em] uppercase mb-6">Our Core</h2>
+            <h3 className="text-4xl md:text-6xl font-display font-black mb-8 leading-[0.9] tracking-tighter">WE FUEL THE BOLD.</h3>
+            <p className="text-zinc-400 text-xl leading-relaxed mb-10 font-medium">
+              Scrollfuel was born from a simple observation: most brands are running on empty. We provide the <span className="text-white">Digital Energy</span> required to dominate modern platforms through high-impact visuals and data-fueled strategies.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-xl font-bold mb-2">Unique Identity</h4>
-                <p className="text-zinc-500 text-sm">We craft brands that stand out in a saturated market through strategic design.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div className="border-l-2 border-primary pl-6">
+                <h4 className="text-2xl font-black mb-2 italic">HIGH OCTANE</h4>
+                <p className="text-zinc-500 text-sm font-medium">We move faster than the market. Our creative cycles are built for speed and impact.</p>
               </div>
-              <div>
-                <h4 className="text-xl font-bold mb-2">Data-Driven</h4>
-                <p className="text-zinc-500 text-sm">Our creative decisions are backed by deep market analysis and user data.</p>
+              <div className="border-l-2 border-primary pl-6">
+                <h4 className="text-2xl font-black mb-2 italic">ZERO WASTE</h4>
+                <p className="text-zinc-500 text-sm font-medium">Every pixel and every penny is optimized for growth and measurable brand equity.</p>
               </div>
             </div>
           </div>
