@@ -4,8 +4,17 @@ import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const leadership = [
-    { name: 'Alex "Nitro" Reed', role: 'Founder / CEO' },
-    { name: 'Sarah "Spark" Chen', role: 'Co-Founder / CCO' },
+    { name: 'Akshay Zade', role: 'Founder / CEO' },
+    { name: 'Achal zanzal', role: 'Co-Founder / CCO' },
+  ];
+
+  const socialLinks = [
+    { name: 'Instagram', url: 'https://www.instagram.com/scrollfuel/' },
+    { name: 'Facebook', url: 'https://www.facebook.com/scrollfuel.nagpur' },
+    { name: 'Twitter', url: 'https://x.com/scrollfuel' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/scrollfuel/' },
+    { name: 'Pinterest', url: 'https://in.pinterest.com/scrollfuel/' },
+    { name: 'Behance', url: 'https://www.behance.net/scrollfuel60b4' },
   ];
 
   return (
@@ -26,10 +35,16 @@ const Footer: React.FC = () => {
             <p className="text-zinc-500 mb-10 leading-relaxed font-medium">
               A high-voltage agency specialized in cinematic videography and aggressive digital marketing. We energize brands for the modern age.
             </p>
-            <div className="flex space-x-6">
-              {['Twitter', 'Instagram', 'LinkedIn', 'Vimeo'].map((platform) => (
-                <a key={platform} href="#" className="text-zinc-500 hover:text-primary transition-colors text-xs font-black uppercase tracking-widest">
-                  {platform}
+            <div className="flex flex-wrap gap-4">
+              {socialLinks.map((social) => (
+                <a 
+                  key={social.name} 
+                  href={social.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-zinc-500 hover:text-primary transition-colors text-[10px] font-black uppercase tracking-widest"
+                >
+                  {social.name}
                 </a>
               ))}
             </div>
