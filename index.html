@@ -18,9 +18,9 @@
               display: ['Montserrat', 'sans-serif'],
             },
             colors: {
-              primary: '#84cc16', // Lime Green from logo
-              accent: '#4ade80',  // Lighter green
-              dark: '#000000',    // Pure black like logo background
+              primary: '#facc15', // Vibrant Yellow
+              accent: '#fbbf24',  // Amber/Yellow accent
+              dark: '#000000',    // Pure black
             }
           }
         }
@@ -33,13 +33,27 @@
         -webkit-backdrop-filter: blur(12px);
       }
       .gradient-text {
-        background: linear-gradient(to right, #ffffff, #84cc16);
+        background: linear-gradient(to right, #ffffff, #facc15);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
       .logo-font {
         font-family: 'Montserrat', sans-serif;
         letter-spacing: -0.05em;
+      }
+      /* Custom utility for active links */
+      .nav-link-active {
+        color: #facc15 !important;
+        position: relative;
+      }
+      .nav-link-active::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #facc15;
       }
     </style>
 <script type="importmap">
@@ -48,6 +62,7 @@
     "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.1.5",
     "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
   }
 }

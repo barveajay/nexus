@@ -75,7 +75,7 @@ const BrandAssistant: React.FC = () => {
                 placeholder="Type your brand goal..."
                 className="flex-1 bg-zinc-900 text-white rounded-full px-5 py-3 text-xs focus:outline-none focus:ring-1 focus:ring-primary placeholder:text-zinc-600"
               />
-              <button type="submit" className="bg-primary p-3 rounded-full hover:bg-lime-500 transition-all transform active:scale-95 shadow-lg shadow-primary/20">
+              <button type="submit" className="bg-primary p-3 rounded-full hover:bg-yellow-400 transition-all transform active:scale-95 shadow-lg shadow-primary/20">
                 <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
               </button>
             </div>

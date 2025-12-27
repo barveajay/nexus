@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,37 +15,43 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass border-b border-zinc-900 py-4' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-[90] transition-all duration-300 ${isScrolled ? 'glass border-b border-zinc-900 py-4' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <div className="flex flex-col">
+        <Link to="/" className="flex flex-col group">
           <div className="text-3xl logo-font font-black leading-none flex items-center">
             <span className="text-white">scroll</span>
-            <span className="text-primary">fuel</span>
+            <span className="text-primary group-hover:animate-pulse">fuel</span>
           </div>
           <div className="text-[7px] font-bold tracking-[0.2em] uppercase text-zinc-400 mt-0.5">
             Digital Energy To Your Business
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors">
+            <NavLink 
+              key={link.name} 
+              to={link.href} 
+              className={({ isActive }) => 
+                `text-sm font-bold uppercase tracking-widest transition-all hover:text-primary ${isActive ? 'text-primary' : 'text-zinc-400'}`
+              }
+            >
               {link.name}
-            </a>
+            </NavLink>
           ))}
-          <a href="#contact" className="bg-primary hover:bg-lime-500 text-black px-6 py-2.5 rounded-full text-sm font-black uppercase transition-all transform hover:scale-105">
+          <Link to="/contact" className="bg-primary hover:bg-yellow-400 text-black px-6 py-2.5 rounded-full text-sm font-black uppercase transition-all transform hover:scale-105">
             Boost Your Brand
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -64,24 +71,26 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[72px] bg-black z-40 p-6 flex flex-col space-y-6">
+        <div className="md:hidden fixed inset-0 top-[72px] bg-black z-[100] p-6 flex flex-col space-y-6">
           {navLinks.map((link) => (
-            <a 
+            <NavLink 
               key={link.name} 
-              href={link.href} 
-              className="text-4xl font-display font-black uppercase"
+              to={link.href} 
+              className={({ isActive }) => 
+                `text-4xl font-display font-black uppercase ${isActive ? 'text-primary' : 'text-white'}`
+              }
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
-            </a>
+            </NavLink>
           ))}
-          <a 
-            href="#contact" 
+          <Link 
+            to="/contact" 
             className="bg-primary text-center text-black px-6 py-4 rounded-xl text-lg font-black uppercase"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Boost Your Brand
-          </a>
+          </Link>
         </div>
       )}
     </nav>

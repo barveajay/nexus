@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   return (
@@ -31,12 +32,12 @@ const Hero: React.FC = () => {
           <span className="text-white">Giving Digital Energy to your Business.</span>
         </p>
         <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6">
-          <a href="#portfolio" className="w-full md:w-auto px-12 py-5 bg-primary hover:bg-lime-500 text-black rounded-full text-lg font-black uppercase transition-all transform hover:scale-105 shadow-xl shadow-primary/20">
+          <Link to="/fuel" className="w-full md:w-auto px-12 py-5 bg-primary hover:bg-yellow-500 text-black rounded-full text-lg font-black uppercase transition-all transform hover:scale-105 shadow-xl shadow-primary/20">
             Fuel Your Business
-          </a>
-          <a href="#contact" className="w-full md:w-auto px-12 py-5 bg-transparent border-2 border-zinc-800 hover:border-primary hover:text-primary rounded-full text-lg font-black uppercase transition-all">
+          </Link>
+          <Link to="/start" className="w-full md:w-auto px-12 py-5 bg-transparent border-2 border-zinc-800 hover:border-primary hover:text-primary rounded-full text-lg font-black uppercase transition-all">
             Start the Engine
-          </a>
+          </Link>
         </div>
       </div>
 

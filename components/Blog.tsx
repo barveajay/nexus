@@ -36,9 +36,9 @@ const Blog: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div>
             <h2 className="text-sm font-bold text-primary tracking-widest uppercase mb-4">Insights</h2>
-            <h3 className="text-4xl md:text-5xl font-display font-extrabold text-white">Latest From The Lab.</h3>
+            <h3 className="text-4xl md:text-5xl font-display font-extrabold text-white uppercase italic tracking-tighter">Latest From The Lab.</h3>
           </div>
-          <a href="#" className="text-primary font-bold hover:underline flex items-center gap-2">
+          <a href="#" className="text-primary font-bold hover:underline flex items-center gap-2 uppercase text-xs tracking-widest">
             View All Insights
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </a>
@@ -54,17 +54,17 @@ const Blog: React.FC = () => {
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-primary text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
+                  <span className="bg-primary text-black text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
                     {post.category}
                   </span>
                 </div>
               </div>
               <div>
-                <p className="text-zinc-500 text-xs mb-3 font-bold">{post.date}</p>
-                <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-primary transition-colors leading-tight">
+                <p className="text-zinc-500 text-xs mb-3 font-bold uppercase tracking-widest">{post.date}</p>
+                <h4 className="text-2xl font-black text-white mb-4 group-hover:text-primary transition-colors leading-tight uppercase tracking-tight italic">
                   {post.title}
                 </h4>
-                <p className="text-zinc-400 text-sm leading-relaxed line-clamp-2">
+                <p className="text-zinc-400 text-sm leading-relaxed line-clamp-2 font-medium">
                   {post.excerpt}
                 </p>
               </div>
