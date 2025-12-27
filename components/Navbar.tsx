@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
@@ -49,7 +48,7 @@ const Navbar: React.FC = () => {
               {link.name}
             </NavLink>
           ))}
-          <Link to="/contact" className="bg-primary hover:bg-yellow-400 text-black px-6 py-2.5 rounded-full text-sm font-black uppercase transition-all transform hover:scale-105">
+          <Link to="/contact" className="bg-energy-green hover:bg-green-400 text-black px-6 py-2.5 rounded-full text-sm font-black uppercase transition-all transform hover:scale-105 shadow-lg shadow-energy-green/20">
             Boost Your Brand
           </Link>
         </div>
@@ -86,7 +85,7 @@ const Navbar: React.FC = () => {
           ))}
           <Link 
             to="/contact" 
-            className="bg-primary text-center text-black px-6 py-4 rounded-xl text-lg font-black uppercase"
+            className="bg-energy-green text-center text-black px-6 py-4 rounded-xl text-lg font-black uppercase"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Boost Your Brand

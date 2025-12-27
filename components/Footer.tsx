@@ -3,11 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
-  const leadership = [
-    { name: 'Akshay Zade', role: 'Founder / CEO' },
-    { name: 'Achal zanzal', role: 'Co-Founder / CCO' },
-  ];
-
   const socialLinks = [
     { name: 'Instagram', url: 'https://www.instagram.com/scrollfuel/' },
     { name: 'Facebook', url: 'https://www.facebook.com/scrollfuel.nagpur' },
@@ -17,10 +12,12 @@ const Footer: React.FC = () => {
     { name: 'Behance', url: 'https://www.behance.net/scrollfuel60b4' },
   ];
 
+  const mapsUrl = "https://www.google.com/maps/search/?api=1&query=plot+no+133+Bidoba+Sahkari+Sanstha+Wardha+Rd+Nagpur";
+
   return (
     <footer className="py-24 border-t border-zinc-900 bg-black">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
           {/* Brand Column */}
           <div className="flex flex-col">
             <div className="flex flex-col mb-8">
@@ -32,9 +29,17 @@ const Footer: React.FC = () => {
                 Digital Energy To Your Business
               </div>
             </div>
-            <p className="text-zinc-500 mb-10 leading-relaxed font-medium">
+            <p className="text-zinc-500 mb-6 leading-relaxed font-medium">
               A high-voltage agency specialized in cinematic videography and aggressive digital marketing. We energize brands for the modern age.
             </p>
+            <div className="space-y-2 mb-10">
+              <a href="mailto:scrollfuel@gmail.com" className="block text-primary text-xs font-black uppercase tracking-widest hover:text-energy-green transition-colors">
+                scrollfuel@gmail.com
+              </a>
+              <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="block text-zinc-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary transition-colors">
+                Nagpur, MH, India
+              </a>
+            </div>
             <div className="flex flex-wrap gap-4">
               {socialLinks.map((social) => (
                 <a 
@@ -47,31 +52,6 @@ const Footer: React.FC = () => {
                   {social.name}
                 </a>
               ))}
-            </div>
-          </div>
-
-          {/* Leadership & Team Column */}
-          <div>
-            <h4 className="font-black mb-8 uppercase text-[10px] tracking-[0.3em] text-zinc-300">Core Crew</h4>
-            <div className="space-y-6">
-              {leadership.map((leader, idx) => (
-                <div key={idx} className="group">
-                  <p className="text-primary text-sm font-black uppercase tracking-tighter italic leading-none mb-1 group-hover:translate-x-1 transition-transform">
-                    {leader.name}
-                  </p>
-                  <p className="text-zinc-600 text-[10px] font-bold uppercase tracking-widest">
-                    {leader.role}
-                  </p>
-                </div>
-              ))}
-              <div className="pt-4 border-t border-zinc-900">
-                <p className="text-zinc-400 text-sm font-black italic">
-                  + 18 High-Energy Specialists
-                </p>
-                <p className="text-zinc-600 text-[9px] font-bold uppercase tracking-widest mt-1">
-                  Global Creative Collective
-                </p>
-              </div>
             </div>
           </div>
           

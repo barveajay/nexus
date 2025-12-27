@@ -37,6 +37,8 @@ const Contact: React.FC = () => {
     });
   };
 
+  const mapsUrl = "https://www.google.com/maps/search/?api=1&query=plot+no+133+Bidoba+Sahkari+Sanstha+Wardha+Rd+near+Hotel+Center+point+Bante+Layout+Sonegaon+Nagpur+Maharashtra+440025";
+
   return (
     <section id="contact" className="py-24 bg-dark">
       <div className="container mx-auto px-6">
@@ -49,18 +51,20 @@ const Contact: React.FC = () => {
                   Whether you're starting from scratch or looking for a brand evolution, we're ready to take the leap with you.
                 </p>
                 <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-black/10 rounded-full flex items-center justify-center border border-black/20">
+                  <a href="mailto:scrollfuel@gmail.com" className="flex items-start space-x-4 group">
+                    <div className="w-12 h-12 bg-black/10 rounded-full flex-shrink-0 flex items-center justify-center border border-black/20 group-hover:bg-black group-hover:text-energy-green transition-all">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                     </div>
-                    <span className="font-bold uppercase tracking-widest text-sm">hello@scrollfuel.com</span>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-black/10 rounded-full flex items-center justify-center border border-black/20">
+                    <span className="font-black uppercase tracking-tight text-sm py-3 group-hover:underline">scrollfuel@gmail.com</span>
+                  </a>
+                  <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-start space-x-4 group">
+                    <div className="w-12 h-12 bg-black/10 rounded-full flex-shrink-0 flex items-center justify-center border border-black/20 mt-1 group-hover:bg-black group-hover:text-energy-green transition-all">
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                     </div>
-                    <span className="font-bold uppercase tracking-widest text-sm">Fuel Station, Nagpur, India</span>
-                  </div>
+                    <span className="font-bold uppercase tracking-tight text-[11px] leading-relaxed group-hover:underline">
+                      plot no 133, Bidoba Sahkari Sanstha, Wardha Rd,<br/> near Hotel Center point, Bante Layout, Sonegaon,<br/> Nagpur, Maharashtra 440025
+                    </span>
+                  </a>
                 </div>
               </div>
               
@@ -71,7 +75,7 @@ const Contact: React.FC = () => {
                     href={social.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-10 h-10 border border-black/30 rounded-full flex items-center justify-center text-[10px] font-black hover:bg-black hover:text-primary cursor-pointer transition-all uppercase"
+                    className="w-10 h-10 border border-black/30 rounded-full flex items-center justify-center text-[10px] font-black hover:bg-black hover:text-energy-green cursor-pointer transition-all uppercase"
                   >
                     {social.label}
                   </a>
@@ -104,7 +108,7 @@ const Contact: React.FC = () => {
                   <label className="text-xs font-bold uppercase tracking-widest text-zinc-500">Message</label>
                   <textarea name="message" rows={4} required onChange={handleChange} value={formData.message} className="w-full bg-zinc-900 border-none rounded-xl p-4 focus:ring-2 focus:ring-primary transition-all text-white" placeholder="Tell us about your project..."></textarea>
                 </div>
-                <button type="submit" className="w-full py-4 bg-primary text-black rounded-xl text-lg font-black uppercase tracking-widest hover:bg-yellow-400 transition-all transform hover:scale-[1.02]">
+                <button type="submit" className="w-full py-4 bg-energy-green text-black rounded-xl text-lg font-black uppercase tracking-widest hover:bg-[#a3e635] transition-all transform hover:scale-[1.02] shadow-xl shadow-energy-green/20">
                   Send to WhatsApp
                 </button>
               </form>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -18,8 +17,9 @@
               display: ['Montserrat', 'sans-serif'],
             },
             colors: {
-              primary: '#facc15', // Vibrant Yellow
-              accent: '#fbbf24',  // Amber/Yellow accent
+              primary: '#FFC93B', // Brand Gold
+              accent: '#FFC93B',  
+              'energy-green': '#8BC53F', // Brand Lime
               dark: '#000000',    // Pure black
             }
           }
@@ -33,7 +33,7 @@
         -webkit-backdrop-filter: blur(12px);
       }
       .gradient-text {
-        background: linear-gradient(to right, #ffffff, #facc15);
+        background: linear-gradient(to right, #ffffff, #FFC93B);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -43,7 +43,7 @@
       }
       /* Custom utility for active links */
       .nav-link-active {
-        color: #facc15 !important;
+        color: #FFC93B !important;
         position: relative;
       }
       .nav-link-active::after {
@@ -53,7 +53,10 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: #facc15;
+        background-color: #FFC93B;
+      }
+      body {
+        background-color: #000000;
       }
     </style>
 <script type="importmap">

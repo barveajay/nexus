@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -17,7 +16,7 @@ const Hero: React.FC = () => {
 
       {/* Pulsing Glow Elements */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-energy-green/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
 
       <div className="container mx-auto px-6 relative z-10 text-center">
         <div className="inline-block bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full text-primary text-xs font-black uppercase tracking-[0.3em] mb-8 animate-bounce">
@@ -35,7 +34,7 @@ const Hero: React.FC = () => {
           <Link to="/fuel" className="w-full md:w-auto px-12 py-5 bg-primary hover:bg-yellow-500 text-black rounded-full text-lg font-black uppercase transition-all transform hover:scale-105 shadow-xl shadow-primary/20">
             Fuel Your Business
           </Link>
-          <Link to="/start" className="w-full md:w-auto px-12 py-5 bg-transparent border-2 border-zinc-800 hover:border-primary hover:text-primary rounded-full text-lg font-black uppercase transition-all">
+          <Link to="/start" className="w-full md:w-auto px-12 py-5 bg-transparent border-2 border-energy-green/30 text-energy-green hover:border-energy-green hover:bg-energy-green/5 rounded-full text-lg font-black uppercase transition-all transform hover:scale-105">
             Start the Engine
           </Link>
         </div>
