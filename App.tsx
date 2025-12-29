@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -15,6 +14,9 @@ import ContactPage from './pages/ContactPage';
 import CareersPage from './pages/CareersPage';
 import FuelPage from './pages/FuelPage';
 import StartPage from './pages/StartPage';
+import NewsletterPage from './pages/NewsletterPage';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
 
 // Helper to scroll to top on route change
 const ScrollToTop = () => {
@@ -42,6 +44,9 @@ const App: React.FC = () => {
             <Route path="/careers" element={<CareersPage />} />
             <Route path="/fuel" element={<FuelPage />} />
             <Route path="/start" element={<StartPage />} />
+            <Route path="/newsletter" element={<NewsletterPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
           </Routes>
         </main>
         <Footer />

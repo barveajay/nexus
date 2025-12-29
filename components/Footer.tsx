@@ -1,8 +1,8 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
   const socialLinks = [
     { name: 'Instagram', url: 'https://www.instagram.com/scrollfuel/' },
     { name: 'Facebook', url: 'https://www.facebook.com/scrollfuel.nagpur' },
@@ -13,6 +13,11 @@ const Footer: React.FC = () => {
   ];
 
   const mapsUrl = "https://www.google.com/maps/search/?api=1&query=plot+no+133+Bidoba+Sahkari+Sanstha+Wardha+Rd+Nagpur";
+
+  const handleSubscribeClick = (e: React.FormEvent) => {
+    e.preventDefault();
+    navigate('/newsletter');
+  };
 
   return (
     <footer className="py-24 border-t border-zinc-900 bg-black">
@@ -63,7 +68,7 @@ const Footer: React.FC = () => {
               <li><Link to="/about" className="hover:text-primary transition-colors">Our Core</Link></li>
               <li><Link to="/services" className="hover:text-primary transition-colors">Power Services</Link></li>
               <li><Link to="/portfolio" className="hover:text-primary transition-colors">The Lab (Work)</Link></li>
-              <li><Link to="/careers" className="hover:text-primary transition-colors">Join the Team</Link></li>
+              <li><Link to="/newsletter" className="hover:text-primary transition-colors font-bold text-energy-green">Newsletter Intake</Link></li>
             </ul>
           </div>
 
@@ -71,13 +76,13 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-black mb-8 uppercase text-[10px] tracking-[0.3em] text-zinc-300">Newsletter Intake</h4>
             <p className="text-zinc-500 text-xs mb-6 font-medium">Receive weekly high-octane marketing insights.</p>
-            <form className="flex flex-col space-y-3">
+            <form onSubmit={handleSubscribeClick} className="flex flex-col space-y-3">
               <input 
                 type="email" 
                 placeholder="Email for Fuel" 
                 className="bg-zinc-900 border border-zinc-800 p-4 rounded-2xl text-xs focus:outline-none focus:ring-1 focus:ring-primary placeholder:text-zinc-700 text-white" 
               />
-              <button className="bg-primary hover:bg-yellow-400 text-black p-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all">
+              <button type="submit" className="bg-primary hover:bg-yellow-400 text-black p-4 rounded-2xl font-black text-xs uppercase tracking-widest transition-all">
                 Subscribe
               </button>
             </form>
@@ -87,8 +92,8 @@ const Footer: React.FC = () => {
         <div className="pt-10 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center text-zinc-700 text-[9px] font-black uppercase tracking-[0.4em]">
           <p>© 2024 SCROLLFUEL AGENCY. ALL ENGINES GO.</p>
           <div className="flex space-x-8 mt-6 md:mt-0">
-            <a href="#" className="hover:text-zinc-400">Privacy</a>
-            <a href="#" className="hover:text-zinc-400">Terms</a>
+            <Link to="/privacy" className="hover:text-zinc-400">Privacy</Link>
+            <Link to="/terms" className="hover:text-zinc-400">Terms</Link>
           </div>
         </div>
       </div>
